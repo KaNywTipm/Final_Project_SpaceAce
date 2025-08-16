@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://qq0gjyel2fm6"]
+
+[ext_resource type="Script" uid="uid://4jxtnvh4p1ux" path="res://Scenes/OutOfTime/OutOfTime.gd" id="1_fjvob"]
+
+[node name="OutOfTime" type="Node"]
+script = ExtResource("1_fjvob")
+life_s = 10.0

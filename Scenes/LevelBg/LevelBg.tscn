@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdf2n2vvpqpq3"]
+
+[ext_resource type="Texture2D" uid="uid://bfo2eu48t23pm" path="res://assets/backgrounds/spr_stars01.png" id="1_oa1p5"]
+[ext_resource type="Texture2D" uid="uid://dx6psa1o30grr" path="res://assets/backgrounds/spr_stars02.png" id="2_vj2w8"]
+
+[node name="LevelBg" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(0, 2560)
+autoscroll = Vector2(0, 50)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("1_oa1p5")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(0, 2560)
+autoscroll = Vector2(0, 90)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2"]
+texture = ExtResource("2_vj2w8")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(100, -150)
+repeat_size = Vector2(0, 2560)
+autoscroll = Vector2(0, 120)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3"]
+texture = ExtResource("2_vj2w8")
