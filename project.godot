@@ -13,3 +13,8 @@ config_version=5
 config/name="Final_Project_Space"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=480
