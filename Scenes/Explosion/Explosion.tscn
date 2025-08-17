@@ -183,6 +183,7 @@ animations = [{
 }]
 
 [node name="Explosion" type="Node2D"]
+z_index = 10
 script = ExtResource("1_s6ffo")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
@@ -190,7 +191,6 @@ stream = SubResource("AudioStreamRandomizer_7hayv")
 autoplay = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(120, 59)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_onhrt")
 animation = &"explode"
