@@ -12,7 +12,7 @@ config_version=5
 
 config/name="SpaceAce"
 config/description="Starter pack"
-run/main_scene="uid://2ajn46ojd0r2"
+run/main_scene="uid://b4on2i2yykp6r"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="uid://cf5ua6nbkyovw"
 

@@ -1,8 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://2ajn46ojd0r2"]
+[gd_scene load_steps=8 format=3 uid="uid://2ajn46ojd0r2"]
 
 [ext_resource type="Texture2D" uid="uid://b2opofve3y3we" path="res://assets/backgrounds/GalaxyUno.png" id="1_i3fi7"]
+[ext_resource type="Script" uid="uid://d1bc547wi3352" path="res://Scenes/Main/Main.gd" id="1_o8wgc"]
+[ext_resource type="PackedScene" uid="uid://rf207cvvt5of" path="res://Scenes/UiButton/UiButton.tscn" id="2_i3fi7"]
 [ext_resource type="PackedScene" uid="uid://sqr4aejsdpl5" path="res://Scenes/Sun/Sun.tscn" id="2_o8wgc"]
+[ext_resource type="FontFile" uid="uid://b33msg5mojbvg" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="3_w20t6"]
 [ext_resource type="AudioStream" uid="uid://ch61rkn7lovsl" path="res://assets/sounds/loops/TitleScreen.mp3" id="4_aw1lf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aw1lf"]
+font = ExtResource("3_w20t6")
+font_size = 72
+font_color = Color(0.809327, 0.501855, 0.233762, 1)
+outline_size = 8
 
 [node name="Main" type="Control"]
 process_mode = 3
@@ -12,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_o8wgc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -29,21 +39,30 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 24
+theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
+theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 24
 
 [node name="Label" type="Label" parent="MC"]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "SPACE ACE"
+label_settings = SubResource("LabelSettings_aw1lf")
 
 [node name="VB" type="VBoxContainer" parent="MC"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_constants/separation = 18
+
+[node name="PlayButton" parent="MC/VB" instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+button_text = "Play"
+
+[node name="ExitButton" parent="MC/VB" instance=ExtResource("2_i3fi7")]
+layout_mode = 2
+button_text = "Exit"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_aw1lf")
@@ -53,3 +72,6 @@ autoplay = true
 [node name="Sun" parent="." instance=ExtResource("2_o8wgc")]
 position = Vector2(48, 50)
 scale = Vector2(0.3, 0.3)
+
+[connection signal="pressed" from="MC/VB/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MC/VB/ExitButton" to="." method="_on_exit_button_pressed"]
