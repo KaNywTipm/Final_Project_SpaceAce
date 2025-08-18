@@ -8,7 +8,7 @@ const GROUP_NAME: String = "Player"
 
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
-
+@onready var shield: Shield = $Shield
 
 
 # Called when the node enters the scene tree for the first time.
@@ -26,4 +26,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+	if area is PowerUp:
+		match area.power_up_type:
+			PowerUp.PowerUpType.Shield:
+				shield.enable_shield()

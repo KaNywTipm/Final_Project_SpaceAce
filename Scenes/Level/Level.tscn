@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4on2i2yykp6r"]
+[gd_scene load_steps=7 format=3 uid="uid://b4on2i2yykp6r"]
 
 [ext_resource type="PackedScene" uid="uid://cdf2n2vvpqpq3" path="res://Scenes/LevelBg/LevelBg.tscn" id="1_3hkb6"]
 [ext_resource type="Script" uid="uid://b0sg63xr718px" path="res://Scenes/Level/Level.gd" id="1_ksici"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cs7twesq7bmwk" path="res://Scenes/Player/Player.tscn" id="3_4dwx7"]
 [ext_resource type="PackedScene" uid="uid://c8pkpg6y6ly4y" path="res://Scenes/ObjectMaker/ObjectMaker.tscn" id="4_k2uda"]
 [ext_resource type="AudioStream" uid="uid://t0l7khnjnye0" path="res://assets/sounds/loops/Mercury.wav" id="5_ksici"]
-[ext_resource type="PackedScene" uid="uid://c0hrx7ft7joyt" path="res://Scenes/HomingMissile/HomingMissile.tscn" id="7_8gphe"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_ksici")
@@ -24,6 +23,3 @@ position = Vector2(315, 424)
 stream = ExtResource("5_ksici")
 volume_db = -10.0
 autoplay = true
-
-[node name="HomingMissile" parent="." instance=ExtResource("7_8gphe")]
-position = Vector2(38, 24)
