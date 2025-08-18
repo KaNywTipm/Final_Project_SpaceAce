@@ -36,9 +36,12 @@ custom_minimum_size = Vector2(128, 18)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+start_health = 75
 
 [node name="Label" type="Label" parent="ColorRect/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "00000"
 label_settings = ExtResource("2_anolp")
+
+[connection signal="died" from="ColorRect/MarginContainer/HealthBar" to="." method="_on_health_bar_died"]

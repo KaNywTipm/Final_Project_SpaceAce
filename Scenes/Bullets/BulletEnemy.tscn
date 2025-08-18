@@ -10,6 +10,7 @@ height = 18.0
 [node name="BulletEnemy" instance=ExtResource("1_jkyeh")]
 collision_layer = 4
 collision_mask = 33
+damage = 15
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_xy2jo")

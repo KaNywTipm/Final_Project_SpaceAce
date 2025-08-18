@@ -8,8 +8,8 @@ class_name Shield
 
 
 @onready var timer: Timer = $Timer
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sound: AudioStreamPlayer2D = $Sound
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 var _health: int = start_health
@@ -44,6 +44,7 @@ func hit() -> void:
 
 func _on_timer_timeout() -> void:
 	disable_shield()
+
 
 
 func _on_area_entered(area: Area2D) -> void:

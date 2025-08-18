@@ -19,6 +19,7 @@ func setup(dir: Vector2, sp: float) -> void:
 
 
 func blow_up() -> void:
+	print("blow_up child")
 	SignalHub.emit_on_create_explosion(
 		global_position, 
 		Explosion.EXPLODE
