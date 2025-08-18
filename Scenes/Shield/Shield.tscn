@@ -46,6 +46,8 @@ _data = {
 }
 
 [node name="Shield" type="Area2D"]
+collision_layer = 32
+collision_mask = 4
 script = ExtResource("1_nlrep")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -57,7 +59,7 @@ texture = ExtResource("1_sngbc")
 shape = SubResource("CircleShape2D_sngbc")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 one_shot = true
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
@@ -67,3 +69,5 @@ stream = ExtResource("2_djkv3")
 libraries = {
 &"": SubResource("AnimationLibrary_hijiv")
 }
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

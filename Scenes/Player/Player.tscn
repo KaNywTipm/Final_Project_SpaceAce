@@ -20,3 +20,5 @@ hframes = 4
 shape = SubResource("CircleShape2D_ude3g")
 
 [node name="Shield" parent="." instance=ExtResource("3_h54ih")]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
