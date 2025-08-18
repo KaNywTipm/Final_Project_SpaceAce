@@ -11,5 +11,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		)
 		SignalHub.emit_on_create_powerup(
 			Vector2(315,350), 
-			PowerUp.PowerUpType.Shield
+			PowerUp.PowerUpType.Health
 		)
