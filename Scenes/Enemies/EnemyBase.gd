@@ -7,14 +7,18 @@ class_name EnemyBase
 
 
 @onready var booms: Node2D = $Booms
+@onready var health_bar: HealthBar = $HealthBar
+@onready var sound: AudioStreamPlayer2D = $Sound
+
 
 var _speed: float = 50
 
 
 func _process(delta: float) -> void:
-	pass
+	progress += _speed * delta
+	if progress_ratio > 0.99:
+		queue_free()
 	
-
 
 func make_booms() -> void:
 	for b in booms.get_children():
@@ -23,11 +27,15 @@ func make_booms() -> void:
 			Explosion.BOOM
 		)
 
-
+func die() -> void:
+	make_booms()
+	queue_free()
 
 func _on_health_bar_died() -> void:
-	pass # Replace with function body.
+	ScoreManager.increment_score(points)
+	die()
 
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+	if area is BulletBase:
+		health_bar.take_damage(area.get_damage())

@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bm01xikyplp00" path="res://Scenes/HealthBar/HealthBar.tscn" id="3_2a3kf"]
 
 [node name="EnemyBase" type="PathFollow2D"]
+rotates = false
+loop = false
 script = ExtResource("1_srcxp")
 
 [node name="OutOfTime" parent="." instance=ExtResource("1_iiq2q")]
@@ -15,7 +17,16 @@ life_s = 30.0
 [node name="Booms" type="Node2D" parent="."]
 
 [node name="HealthBar" parent="." instance=ExtResource("3_2a3kf")]
+level_low = 15
+level_med = 30
+start_health = 40
+max_health = 40
 
 [node name="HitBox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+
+[connection signal="died" from="HealthBar" to="." method="_on_health_bar_died"]
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
