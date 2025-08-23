@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cmtsxb82q41hb" path="res://Scenes/Projectile/Projectile.tscn" id="1_atcv3"]
 [ext_resource type="Texture2D" uid="uid://bqywi64wvxcqj" path="res://assets/lasers/spaceMissiles_040.png" id="2_028iy"]
-[ext_resource type="Script" uid="uid://c1hqt6ddupwcp" path="res://Scenes/HomingMissile/HomingMissile.gd" id="2_ufj55"]
+[ext_resource type="Script" uid="uid://c1hqt6ddupwcp" path="res://Scenes/Bullets/HomingMissile/HomingMissile.gd" id="2_ufj55"]
 [ext_resource type="Texture2D" uid="uid://b0hlsmrvemel0" path="res://assets/misc/ParticleDot.png" id="3_m0p1j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m0p1j"]

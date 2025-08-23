@@ -150,6 +150,12 @@ shoots_at_player = true
 bullet_wait_time = 2.0
 bullet_wait_time_var = 0.2
 
+[node name="Marker2D" type="Marker2D" parent="Booms" index="0"]
+position = Vector2(0, 13)
+
+[node name="Marker2D2" type="Marker2D" parent="Booms" index="1"]
+position = Vector2(0, -12)
+
 [node name="HealthBar" parent="." index="3"]
 offset_left = -14.0
 offset_top = -28.0

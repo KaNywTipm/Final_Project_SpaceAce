@@ -113,6 +113,8 @@ animations = [{
 
 [node name="EnemyZipper" instance=ExtResource("1_6avwl")]
 
+[node name="Marker2D" type="Marker2D" parent="Booms" index="0"]
+
 [node name="HealthBar" parent="." index="3"]
 offset_left = -12.0
 offset_top = -18.0
