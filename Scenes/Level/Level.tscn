@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4on2i2yykp6r"]
+[gd_scene load_steps=11 format=3 uid="uid://b4on2i2yykp6r"]
 
 [ext_resource type="PackedScene" uid="uid://cdf2n2vvpqpq3" path="res://Scenes/LevelBg/LevelBg.tscn" id="1_3hkb6"]
 [ext_resource type="Script" uid="uid://b0sg63xr718px" path="res://Scenes/Level/Level.gd" id="1_ksici"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8pkpg6y6ly4y" path="res://Scenes/ObjectMaker/ObjectMaker.tscn" id="4_k2uda"]
 [ext_resource type="AudioStream" uid="uid://t0l7khnjnye0" path="res://assets/sounds/loops/Mercury.wav" id="5_ksici"]
 [ext_resource type="PackedScene" uid="uid://b0ck5ev7q31md" path="res://Scenes/GameUi/GameUi.tscn" id="7_8gphe"]
+[ext_resource type="PackedScene" uid="uid://b0fxlch2i61oa" path="res://Scenes/GameOverUi/GameOverUi.tscn" id="8_lvwdj"]
 [ext_resource type="PackedScene" uid="uid://c3ppt2hnk4b61" path="res://Scenes/Enemies/Saucer/Saucer.tscn" id="8_t3e81"]
 
 [sub_resource type="Curve2D" id="Curve2D_0o5jl"]
@@ -35,6 +36,8 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GameUi" parent="CanvasLayer" instance=ExtResource("7_8gphe")]
+
+[node name="GameOverUi" parent="CanvasLayer" instance=ExtResource("8_lvwdj")]
 
 [node name="Path2D3" type="Path2D" parent="."]
 position = Vector2(56.3167, -10.527)

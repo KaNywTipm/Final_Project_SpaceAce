@@ -37,9 +37,12 @@ custom_minimum_size = Vector2(128, 18)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-start_health = 50
+level_low = 10
+level_med = 15
+start_health = 20
+max_health = 20
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer"]
+[node name="ScoreLabel" type="Label" parent="ColorRect/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 text = "00000"
