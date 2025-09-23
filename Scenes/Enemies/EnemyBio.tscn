@@ -168,3 +168,4 @@ shape = SubResource("CapsuleShape2D_agfk1")
 
 [node name="AnimatedSprite2D" parent="." index="5"]
 sprite_frames = SubResource("SpriteFrames_ygjic")
+animation = &"new_animation_2"

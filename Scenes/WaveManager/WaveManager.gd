@@ -24,7 +24,7 @@ func _ready() -> void:
 func update_speeds() -> void:
 	if WAVES.wave_is_start(_wave_count) == true:
 		_speed_factor *= 1.02
-		_wave_gap *= 0.97
+		_wave_gap *= 1.5
 
 
 func create_enemy(wave: EnemyWave) -> EnemyShip:
