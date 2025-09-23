@@ -115,7 +115,7 @@ animations = [{
 shoots_at_player = true
 aims_at_player = true
 bullet_type = 2
-bullet_speed = 80.0
+bullet_speed = 150.0
 
 [node name="Marker2D" type="Marker2D" parent="Booms" index="0"]
 position = Vector2(0, -22)

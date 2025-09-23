@@ -26,6 +26,11 @@ func _ready() -> void:
 	SpaceUtils.play_random_animation(animated_sprite_2d)
 	start_shoot_timer()
 
+
+func setup(speed: float) -> void:
+	_speed = speed
+
+
 func start_shoot_timer() -> void:
 	SpaceUtils.set_and_start_timer(
 		laser_timer,
