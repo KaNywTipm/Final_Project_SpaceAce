@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dl43apsdr2mwo"]
+
+[ext_resource type="PackedScene" uid="uid://crv3plbeqqwdg" path="res://Scenes/Enemies/EnemyBase.tscn" id="1_vr6tb"]
+[ext_resource type="Script" uid="uid://br7a6xlndliec" path="res://Scenes/Enemies/EnemyShip.gd" id="2_otrf3"]
+[ext_resource type="AudioStream" uid="uid://da52b8m3s7khp" path="res://assets/sounds/lasers/sfx_wpn_laser1.wav" id="3_kscey"]
+[ext_resource type="AudioStream" uid="uid://dffevs145pngu" path="res://assets/sounds/lasers/sfx_wpn_laser2.wav" id="4_wo7n7"]
+[ext_resource type="AudioStream" uid="uid://d0t32p468w0kn" path="res://assets/sounds/lasers/sfx_wpn_laser3.wav" id="5_lus2q"]
+[ext_resource type="AudioStream" uid="uid://bt8muih1jgeya" path="res://assets/sounds/lasers/sfx_wpn_laser4.wav" id="6_b6fkr"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_j1iqb"]
+streams_count = 4
+stream_0/stream = ExtResource("3_kscey")
+stream_1/stream = ExtResource("4_wo7n7")
+stream_2/stream = ExtResource("5_lus2q")
+stream_3/stream = ExtResource("6_b6fkr")
+
+[node name="EnemyShip" instance=ExtResource("1_vr6tb")]
+script = ExtResource("2_otrf3")
+shoots_at_player = false
+aims_at_player = false
+bullet_type = 1
+bullet_speed = 120.0
+bullet_direction = Vector2(0, 1)
+bullet_wait_time = 3.0
+bullet_wait_time_var = 0.5
+power_up_chance = 0.9
+
+[node name="Sound" parent="." index="1"]
+stream = SubResource("AudioStreamRandomizer_j1iqb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="5"]
+flip_v = true
+
+[node name="LaserTimer" type="Timer" parent="." index="6"]
+one_shot = true
+
+[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]

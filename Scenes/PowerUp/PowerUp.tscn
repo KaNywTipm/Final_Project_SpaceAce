@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://djssfoqnhs3xa"]
+
+[ext_resource type="PackedScene" uid="uid://cmtsxb82q41hb" path="res://Scenes/Projectile/Projectile.tscn" id="1_rbyb8"]
+[ext_resource type="Script" uid="uid://cntqcyxnsu8d5" path="res://Scenes/PowerUp/PowerUp.gd" id="2_v5ap0"]
+[ext_resource type="AudioStream" uid="uid://nek65avy55x2" path="res://assets/sounds/powerup/power_up_deploy.wav" id="3_gtc48"]
+[ext_resource type="Texture2D" uid="uid://bcy8wtnoerd3r" path="res://assets/misc/shield_gold.png" id="3_rtpde"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kdlqn"]
+radius = 8.06
+
+[node name="PowerUp" instance=ExtResource("1_rbyb8")]
+collision_layer = 16
+collision_mask = 1
+script = ExtResource("2_v5ap0")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_rtpde")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_kdlqn")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="." index="4"]
+stream = ExtResource("3_gtc48")
+autoplay = true

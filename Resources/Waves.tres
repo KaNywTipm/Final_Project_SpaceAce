@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyWaves" load_steps=8 format=3 uid="uid://c8dd02fhlwer3"]
+
+[ext_resource type="Script" uid="uid://4yk7jix5mv1m" path="res://Classes/EnemyWaves.gd" id="1_f675a"]
+[ext_resource type="Script" uid="uid://c8wknb2rurgt6" path="res://Classes/EnemyWave.gd" id="2_nfyhi"]
+[ext_resource type="Resource" uid="uid://3f1yfnjmfi1w" path="res://Resources/ZipperWave.tres" id="3_3y4xg"]
+[ext_resource type="Resource" uid="uid://blxxwy38qfl3n" path="res://Resources/BioWave.tres" id="4_h68fo"]
+[ext_resource type="Resource" uid="uid://dvv323gkkd56q" path="res://Resources/BomberWave.tres" id="5_ydhmo"]
+[ext_resource type="PackedScene" uid="uid://ctaiavcwx2gn5" path="res://Scenes/Enemies/EnemyBio.tscn" id="6_h68fo"]
+
+[sub_resource type="Resource" id="Resource_ydhmo"]
+script = ExtResource("2_nfyhi")
+enemy_scene = ExtResource("6_h68fo")
+speed = 110.0
+gap = 1.0
+number = 7
+metadata/_custom_type_script = "uid://c8wknb2rurgt6"
+
+[resource]
+script = ExtResource("1_f675a")
+waves = Array[ExtResource("2_nfyhi")]([ExtResource("3_3y4xg"), ExtResource("4_h68fo"), ExtResource("5_ydhmo"), ExtResource("3_3y4xg"), ExtResource("3_3y4xg"), SubResource("Resource_ydhmo"), ExtResource("3_3y4xg"), ExtResource("5_ydhmo")])
+metadata/_custom_type_script = "uid://4yk7jix5mv1m"
