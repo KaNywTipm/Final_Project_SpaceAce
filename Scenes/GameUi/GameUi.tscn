@@ -39,8 +39,8 @@ size_flags_horizontal = 0
 size_flags_vertical = 4
 level_low = 10
 level_med = 15
-start_health = 20
-max_health = 20
+start_health = 50
+max_health = 50
 
 [node name="ScoreLabel" type="Label" parent="ColorRect/MarginContainer"]
 layout_mode = 2
